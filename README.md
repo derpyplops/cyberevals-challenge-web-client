@@ -1,39 +1,27 @@
 # cyberevals-challenge-web-client
 
-This template should help get you started developing with Vue 3 in Vite.
+Deployed with [surge](https://surge.sh/) at [`cyberevals-challenge-web-client.surge.
+sh/`](https://cyberevals-challenge-web-client.surge.sh/)
 
-## Recommended IDE Setup
+## Install
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+## Run
 
-```sh
+```bash
 pnpm dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Deploy
 
-```sh
-pnpm build
+- Requires [surge](https://surge.sh/help/getting-started-with-surge)
+- Message me on Discord to be added as a collaborator
+
+```bash
+pnpm build && surge --project ./dist --domain cyberevals-challenge-web-client.surge.sh
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+ 
