@@ -8,10 +8,11 @@ const websocket = ref<WebSocket | null>(null);
 const challenges = ref<string[]>([]);
 const selectedChallenge = ref<string>('');
 
+const SERVER_URL = '167.99.159.184:8000';
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:8000/challenges');
+    const response = await axios.get(`http://${SERVER_URL}/challenges`);
     challenges.value = response.data;
     console.log('Challenges:', challenges.value);
   } catch (error) {
@@ -37,7 +38,7 @@ function displayMessage(message: string) {
 }
 
 function sendSelectedChallenge() {
-   websocket.value = new WebSocket('ws://localhost:8000/ws?challenge=' + selectedChallenge.value);
+   websocket.value = new WebSocket(`ws://${SERVER_URL}/ws?challenge=` + selectedChallenge.value);
 
   websocket.value.onmessage = (event: MessageEvent) => {
     const message = event.data;
@@ -97,7 +98,7 @@ function sendSelectedChallenge() {
 
 .terminal-chat-app {
   font-family: monospace;
-  color: green;
+  color: magenta;
   height: 100vh;
   width: 100%;
   display: flex;
